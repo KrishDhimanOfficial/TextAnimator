@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animator</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffff;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-size: 3rem;
+            align-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="myText1">Hello, Krish!</h1>
+    <h1 id="myText2">Hello, Krish!</h1>
+    <h1 id="myText3">Hello, Krish!</h1>
+    <h1 id="myText4">Hello, Krish!</h1>
+    <script src="./animate.js"></script>
+    <script>
+        new TextAnimator('#myText1', {
+            animation: 'bounce',
+            level: 'word',
+            delay: 200,
+            duration: 300,
+            infinite: true
+        }).init();
+        new TextAnimator('#myText2', {
+            animation: 'slideIn',
+            level: 'letter',
+            delay: 200,
+            duration: 300,
+            infinite: true
+        }).init()
+        new TextAnimator('#myText3', {
+            animation: 'fadeIn',
+            delay: 200,
+            duration: 300,
+            level: 'word',
+            direction: 'normal',
+            infinite: true
+        }).init()
+        new TextAnimator('#myText4', {
+            animation: 'typewriter',
+            delay: 200,
+            duration: 300,
+            infinite: true
+        }).init()
+    </script>
+</body>
+
+</html>
